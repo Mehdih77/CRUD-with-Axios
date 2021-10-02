@@ -80,11 +80,11 @@ a:hover {
   color: #fff;
   font-weight: bold;
 }
-.update button:nth-child(3) {
+.update .update-btn {
   background-color: green;
 }
-.update button:nth-child(4) {
-  background-color: orangered;
+.update .cancel-btn {
+  background-color: rgb(0, 110, 255);
 }
 
 /* table */
@@ -96,6 +96,7 @@ a:hover {
   border: none;
   border-radius: 8px;
   color: #fff;
+  width: 80px;
 }
 .table button:first-child {
   margin-right: 30px;
@@ -109,6 +110,16 @@ a:hover {
 }
 .table button:last-child:hover {
   background-color: rgb(199, 53, 0);
+}
+
+/* error */
+.error {
+  font-size: 22px;
+  border-radius: 8px;
+  background-color: rgb(255, 30, 0);
+  padding: 10px;
+  text-align: center;
+  color: #fff;
 }
 
 @media screen and (max-width: 500px) {

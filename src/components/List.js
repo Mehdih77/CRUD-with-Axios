@@ -14,7 +14,7 @@ export default function List() {
     const handleDeleteCrud = (id) => {
         axios.delete(`http://localhost:3000/crud/${id}`)
     }
-
+    
     return (
         <section>
             <table class="table table-dark">
@@ -27,9 +27,9 @@ export default function List() {
                     </tr>
                 </thead>
                 <tbody>
-                        {crudList.length > 0 ? crudList.map(item => (
+                        {crudList.length > 0 ? crudList.map((item,index) => (
                             <tr>
-                            <th scope="row">{item.id.toFixed(3)}</th>
+                            <th scope="row">{index + 1}</th>
                             <td>{item.firstName}</td>
                             <td>{item.lastName}</td>
                             <td>

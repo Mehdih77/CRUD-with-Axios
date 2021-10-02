@@ -25,7 +25,7 @@ export default function Create() {
 
     return (
         <form className='create' onSubmit={handleCreate} autoComplete='off'>
-        {error && <p>error</p>}
+            {error && <p className='error'>error</p>}
             <input
              type="text"
              placeholder='FirstName'

@@ -26,7 +26,7 @@ export default function Update() {
                 history.push('/')
             );
         } else {
-            setError(true)
+            setError(true);
         }
 
     };
@@ -40,7 +40,7 @@ export default function Update() {
 
     return (
         <form className='update' onSubmit={handleUpdate} autoComplete='off'>
-        {error && <p>erroooooooor</p>}
+        {error && <p className='error'>erroooooooor</p>}
             <input
              type="text"
              placeholder='FirstName'
@@ -55,8 +55,8 @@ export default function Update() {
              name='lastName'
              onChange={handleChange} />
 
-            <button type='submit'>Update</button>  
-            <button type='submit'><Link to='/'>Back To Home</Link></button>  
+            <button className='update-btn' type='submit'>Update</button>  
+            <button className='cancel-btn' type='submit'><Link to='/'>Back To Home</Link></button>  
         </form>
     )
 }
