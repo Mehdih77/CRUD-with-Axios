@@ -1,3 +1,3 @@
 ## Demo
 
-<img src="/image/crud.png" alt="crud todo-app" />
+<img src="public/image/crud.png" alt="crud todo-app" />
