@@ -5,20 +5,27 @@ export default function Create() {
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [error, setError] = useState(false);
 
     const handleCreate = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/crud', {
-            id: Math.random(),
-            firstName,
-            lastName
-        });
-        setFirstName('');
-        setLastName('');
+        if (firstName.trim().length > 0 && lastName.trim().length > 0) {
+            axios.post('http://localhost:3000/crud', {
+                id: Math.random(),
+                firstName,
+                lastName
+            });
+            setFirstName('');
+            setLastName('');
+            setError(false);
+        } else {
+            setError(true);
+        }
     };
 
     return (
-        <form className='create' onSubmit={handleCreate}>
+        <form className='create' onSubmit={handleCreate} autoComplete='off'>
+        {error && <p>error</p>}
             <input
              type="text"
              placeholder='FirstName'

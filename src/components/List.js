@@ -33,7 +33,7 @@ export default function List() {
                             <td>{item.firstName}</td>
                             <td>{item.lastName}</td>
                             <td>
-                            <button><Link to='/update'>Update</Link></button>
+                            <button><Link to={`/update/${item.id}`}>Update</Link></button>
                             <button onClick={() => handleDeleteCrud(item.id)} >Delete</button>
                             </td>
                             </tr>

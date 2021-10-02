@@ -8,7 +8,7 @@ function App() {
         <section className='app'>
             <Switch>
                 <Route path='/' exact component={Home}/>
-                <Route path='/update' exact component={Update}/>
+                <Route path='/update/:id' exact component={Update}/>
             </Switch>
         </section>
     );
